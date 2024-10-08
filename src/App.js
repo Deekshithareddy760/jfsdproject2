@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
+import MainNavBar from './main/MainNavBar';
 
-function App() {
+export default function App() {
+  // const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
+  // const [isEmployeeLoggedIn, setIsEmployeeLoggedIn] = useState(false);
+  
+
+  // useEffect(() => {
+  //   // const adminLoggedIn = localStorage.getItem('isAdminLoggedIn') === 'true';
+  //   // const employeeLoggedIn = localStorage.getItem('isEmployeeLoggedIn') === 'true';
+    
+  //   setIsAdminLoggedIn(adminLoggedIn);
+  //   setIsEmployeeLoggedIn(employeeLoggedIn);
+  // }, []);
+
+  // const onAdminLogin = () => {
+  //   localStorage.setItem('isAdminLoggedIn', 'true');
+  //   setIsAdminLoggedIn(true);
+  // };
+
+  // const onEmployeeLogin = () => {
+  //   localStorage.setItem('isEmployeeLoggedIn', 'true');
+  //   setIsEmployeeLoggedIn(true);
+  // };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 align="center"> Welcome</h1>
+      <Router>
+          <MainNavBar
+          />
+      </Router>
+
     </div>
   );
 }
-
-export default App;
